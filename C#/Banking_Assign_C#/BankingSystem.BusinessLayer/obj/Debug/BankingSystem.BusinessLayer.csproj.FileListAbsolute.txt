@@ -1,0 +1,11 @@
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\bin\Debug\BankingSystem.BusinessLayer.dll.config
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\bin\Debug\BankingSystem.BusinessLayer.dll
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\bin\Debug\BankingSystem.BusinessLayer.pdb
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\obj\Debug\BankingSystem.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\obj\Debug\BankingSystem.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\obj\Debug\BankingSystem.BusinessLayer.dll
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\obj\Debug\BankingSystem.BusinessLayer.pdb
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\bin\Debug\BankingSystem.Entity.dll
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\bin\Debug\BankingSystem.Entity.pdb
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\bin\Debug\BankingSystem.Entity.dll.config
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.BusinessLayer\obj\Debug\BankingS.1A4936C9.Up2Date
