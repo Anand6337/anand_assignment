@@ -1,0 +1,6 @@
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Entity\bin\Debug\CarRentalSystem.Entity.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Entity\bin\Debug\CarRentalSystem.Entity.pdb
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Entity\obj\Debug\CarRentalSystem.Entity.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Entity\obj\Debug\CarRentalSystem.Entity.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Entity\obj\Debug\CarRentalSystem.Entity.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Entity\obj\Debug\CarRentalSystem.Entity.pdb

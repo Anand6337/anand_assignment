@@ -1,0 +1,6 @@
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Exception\bin\Debug\CarRentalSystem.Exception.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Exception\bin\Debug\CarRentalSystem.Exception.pdb
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Exception\obj\Debug\CarRentalSystem.Exception.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Exception\obj\Debug\CarRentalSystem.Exception.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Exception\obj\Debug\CarRentalSystem.Exception.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Exception\obj\Debug\CarRentalSystem.Exception.pdb
