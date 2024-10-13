@@ -1,0 +1,7 @@
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.Util\bin\Debug\BankingSystem.Util.dll.config
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.Util\bin\Debug\BankingSystem.Util.dll
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.Util\bin\Debug\BankingSystem.Util.pdb
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.Util\obj\Debug\BankingSystem.Util.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.Util\obj\Debug\BankingSystem.Util.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.Util\obj\Debug\BankingSystem.Util.dll
+C:\Users\HP\Desktop\Training\Technical\Project\BankingSystem.Util\obj\Debug\BankingSystem.Util.pdb

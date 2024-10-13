@@ -39,8 +39,27 @@
     <Reference Include="BankingSystem.Entity">
       <HintPath>..\BankingSystem.Entity\bin\Debug\BankingSystem.Entity.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Apis, Version=1.68.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\BankingSystem\packages\Google.Apis.1.68.0\lib\net462\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Analytics.v3, Version=1.68.0.1679, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\BankingSystem\packages\Google.Apis.Analytics.v3.1.68.0.1679\lib\net462\Google.Apis.Analytics.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.68.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\BankingSystem\packages\Google.Apis.Auth.1.68.0\lib\net462\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.68.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\BankingSystem\packages\Google.Apis.Core.1.68.0\lib\net462\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\BankingSystem\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.CodeDom, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BankingSystem\packages\System.CodeDom.7.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,15 +69,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
-    <Compile Include="AbBankAccount\BankAccount.cs" />
-    <Compile Include="AbBankAccount\SavingsAccount.cs" />
     <Compile Include="CurrentAccount.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="DBUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BankRepositoryImpl.cs" />
+    <Compile Include="Repository\BankServiceProviderImpl.cs" />
+    <Compile Include="Repository\CustomerServiceProviderImpl.cs" />
+    <Compile Include="Repository\IBankRepository.cs" />
     <Compile Include="SavingsAccount.cs" />
+    <Compile Include="Service\BankAccount.cs" />
+    <Compile Include="Service\CurrentAccount.cs" />
+    <Compile Include="Service\IBankServiceProvider.cs" />
+    <Compile Include="Service\ICustomerServiceProvider.cs" />
+    <Compile Include="Service\SavingsAccount.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="ZeroBalanceAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

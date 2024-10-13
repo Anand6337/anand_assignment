@@ -32,8 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BankingSystem.UI.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BankingSystem.BusinessLayer">
+    <Reference Include="BankingSystem.BusinessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BankingSystem.BusinessLayer\bin\Debug\BankingSystem.BusinessLayer.dll</HintPath>
     </Reference>
     <Reference Include="BankingSystem.Entity">

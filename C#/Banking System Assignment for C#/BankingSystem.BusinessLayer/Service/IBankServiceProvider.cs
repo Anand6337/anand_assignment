@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace BankingSystem.BusinessLayer.Service
 {
-    // IBankServiceProvider Interface
-    public interface IBankServiceProvider : ICustomerServiceProvider
+    //IBankServiceProvider Interface
+    public interface IBankServiceProvider
     {
-        void CreateAccount(Customer customer, string accountType, float initialBalance);
-        Account[] ListAccounts();
-        void CalculateInterest();
+        
+        Account GetAccountDetails(long accountNumber);
+        void create_account(Customer customer, int v, string accType, float balance);
+        float deposit(long accountNumber, float amount);
+        float withdraw(long accountNumber, float amount);
+        float get_account_balance(long accountNumber);
+        void transfer(long fromAccountNumber, long toAccountNumber, float amount);
+        IEnumerable<Account> ListAccounts();
+        IEnumerable<object> getTransations(long accountNumber, DateTime fromDate, DateTime toDate);
+        
     }
 }

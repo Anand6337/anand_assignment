@@ -8,31 +8,13 @@ namespace BankingSystem.BusinessLayer
 {
     public class CurrentAccount : Account
     {
-        private const double overdraftLimit = 1000.00;
-        private Customer customer;
-        private float initialBalance;
+        public float OverdraftLimit { get; set; } = 1000; 
+        public CurrentAccount(float initialBalance, Customer customer)
+            : base("Current", initialBalance, customer) { }
 
-        public CurrentAccount(int accountNumber, double accountBalance)
-            : base(accountNumber, "Current", accountBalance) { }
-
-        public CurrentAccount(Customer customer, float initialBalance)
+        public override string ToString()
         {
-            this.customer = customer;
-            this.initialBalance = initialBalance;
-        }
-
-        // Override Withdraw Method to Allow Overdraft
-        public override void Withdraw(double amount)
-        {
-            if (amount <= accountBalance + overdraftLimit)
-            {
-                accountBalance -= amount;
-                Console.WriteLine($"Withdrew {amount:C}. New balance: {accountBalance:C}");
-            }
-            else
-            {
-                Console.WriteLine($"Withdrawal exceeds overdraft limit of {overdraftLimit:C}.");
-            }
+            return $"CurrentAccount: {base.ToString()}, OverdraftLimit: {OverdraftLimit}";
         }
     }
 }

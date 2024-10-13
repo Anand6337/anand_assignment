@@ -8,28 +8,20 @@ namespace BankingSystem.BusinessLayer
 {
     public class SavingsAccount : Account
     {
-        private double interestRate;
-        private Customer customer;
-        private float initialBalance;
+        public float InterestRate { get; set; } = 0.03f; 
+        private const float MinimumBalance = 500;
 
-        public SavingsAccount(Customer customer, float initialBalance)
+        public SavingsAccount(float initialBalance, Customer customer)
+            : base("Savings", initialBalance, customer)
         {
-            this.customer = customer;
-            this.initialBalance = initialBalance;
+            if (initialBalance < MinimumBalance)
+            {
+                throw new ArgumentException($"Initial balance must be at least {MinimumBalance}");
+            }
         }
-
-        public SavingsAccount(int accountNumber, double accountBalance, double interestRate)
-            : base(accountNumber, "Savings", accountBalance)
+        public override string ToString()
         {
-            this.interestRate = interestRate;
-        }
-
-        // Override Interest Calculation Method
-        public override void CalculateInterest()
-        {
-            double interest = (accountBalance * interestRate) / 100;
-            accountBalance += interest;
-            Console.WriteLine($"Interest of {interestRate}% applied. New balance: {accountBalance:C}");
+            return $"SavingsAccount: {base.ToString()}";
         }
     }
 }

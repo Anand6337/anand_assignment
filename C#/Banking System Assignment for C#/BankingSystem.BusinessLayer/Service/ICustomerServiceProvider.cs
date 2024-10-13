@@ -12,8 +12,8 @@ namespace BankingSystem.BusinessLayer.Service
         float GetAccountBalance(long accountNumber);
         float Deposit(long accountNumber, float amount);
         float Withdraw(long accountNumber, float amount);
-        void Transfer(long fromAccount, long toAccount, float amount);
-        void GetAccountDetails(long accountNumber);
+        void Transfer(long fromAccountNumber, long toAccountNumber, float amount);
+        Account GetAccountDetails(long accountNumber);
+        List<Transaction> GetTransactions(long accountNumber, DateTime fromDate, DateTime toDate);
     }
-
 }

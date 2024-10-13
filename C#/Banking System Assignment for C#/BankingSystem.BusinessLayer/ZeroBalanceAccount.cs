@@ -6,28 +6,13 @@ using System.Threading.Tasks;
 
 namespace BankingSystem.BusinessLayer
 {
-    // Zero Balance Account
     public class ZeroBalanceAccount : Account
     {
         public ZeroBalanceAccount(Customer customer)
-            : base(customer, "ZeroBalance", 0) { }
-
-        public override void Withdraw(float amount)
+        : base("ZeroBalance", 0, customer) { }
+        public override string ToString()
         {
-            if (accountBalance - amount >= 0)
-                accountBalance -= amount;
-            else
-                Console.WriteLine("Insufficient balance!");
-        }
-
-        public override void Deposit(float amount)
-        {
-            accountBalance += amount;
-        }
-
-        public override float CalculateInterest()
-        {
-            return 0; // No interest for zero balance account
+            return $"ZeroBalanceAccount: {base.ToString()}";
         }
     }
 }
