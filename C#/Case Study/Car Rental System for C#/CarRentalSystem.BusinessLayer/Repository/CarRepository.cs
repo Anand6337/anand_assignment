@@ -3,49 +3,65 @@ using CarRentalSystem.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using NUnit.Framework;
+using System.Configuration;
+
 
 namespace CarRentalSystem.BusinessLayer
 {
+    [TestFixture]
     public class CarRepository : ICarLeaseRepository
     {
+        private string connectionString;
+        public CarRepository()
+        {
+            // Get the connection string from the configuration file
+            connectionString = ConfigurationManager.ConnectionStrings["CarRentalSystem"].ConnectionString;
+        }
+
+
         // Method to add a new vehicle to the system
         public void AddCar(Car car)
         {
-            SqlConnection connection = null;
             try
             {
-                connection = DBConnUtil.GetConnection("CarRentalSystem");
-                connection.Open();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                string query = "INSERT INTO Vehicle (make, model, year, dailyRate, status, passengerCapacity, engineCapacity) " +
-                               "VALUES (@Make, @Model, @Year, @DailyRate, @Status, @PassengerCapacity, @EngineCapacity)";
-                SqlCommand command = new SqlCommand(query, connection);
+                    // Correct SQL query with all parameters
+                    string query = "INSERT INTO Vehicle (make, model, year, dailyRate, status, passengerCapacity, engineCapacity) " +
+                                   "VALUES (@Make, @Model, @Year, @DailyRate, @Status, @PassengerCapacity, @EngineCapacity)";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameters to avoid SQL Injection
+                        command.Parameters.AddWithValue("@Make", car.Make);
+                        command.Parameters.AddWithValue("@Model", car.Model);
+                        command.Parameters.AddWithValue("@Year", car.Year);
+                        command.Parameters.AddWithValue("@DailyRate", car.DailyRate);
+                        command.Parameters.AddWithValue("@Status", car.Status); // Ensure status is set
+                        command.Parameters.AddWithValue("@PassengerCapacity", car.PassengerCapacity);
+                        command.Parameters.AddWithValue("@EngineCapacity", car.EngineCapacity);
 
-                // Add parameters to avoid SQL Injection
-                command.Parameters.AddWithValue("@Make", car.Make);
-                command.Parameters.AddWithValue("@Model", car.Model);
-                command.Parameters.AddWithValue("@Year", car.Year);
-                command.Parameters.AddWithValue("@DailyRate", car.DailyRate);
-                command.Parameters.AddWithValue("@Status", car.Status);
-                command.Parameters.AddWithValue("@PassengerCapacity", car.PassengerCapacity);
-                command.Parameters.AddWithValue("@EngineCapacity", car.EngineCapacity);
+                        // Execute the SQL command
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Vehicle added successfully.");
+                    }
 
-                command.ExecuteNonQuery();
-                Console.WriteLine("Vehicle added successfully.");
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Handle SQL-specific exceptions
+                Console.WriteLine("SQL Error: " + ex.Message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error while adding the vehicle: " + ex.Message);
-            }
-            finally
-            {
-                if (connection != null && connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                    Console.WriteLine("Database connection closed.");
-                }
+                // Handle general exceptions
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
+
 
         public void AddCustomer(Customer customer)
         {
@@ -58,6 +74,11 @@ namespace CarRentalSystem.BusinessLayer
         }
 
         public Lease CreateLease(int customerID, int carID, DateTime startDate, DateTime endDate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Lease CreateLease(int vehicleID, int customerID, DateTime startDate, DateTime endDate, string type)
         {
             throw new NotImplementedException();
         }
@@ -105,7 +126,7 @@ namespace CarRentalSystem.BusinessLayer
                 {
                     Car car = new Car
                     {
-                        CarID = Convert.ToInt32(reader["vehicleID"]),
+                        VehicleID= Convert.ToInt32(reader["vehicleID"]),
                         Make = reader["make"].ToString(),
                         Model = reader["model"].ToString(),
                         Year = Convert.ToInt32(reader["year"]),
@@ -144,12 +165,22 @@ namespace CarRentalSystem.BusinessLayer
             throw new NotImplementedException();
         }
 
+        public List<Lease> ListofActiveLeases()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> ListRentedCars()
         {
             throw new NotImplementedException();
         }
 
         public void RecordPayment(Lease lease, decimal amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RecordPayment(int lease, decimal amount)
         {
             throw new NotImplementedException();
         }

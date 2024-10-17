@@ -1,0 +1,12 @@
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\CarRentalSystem.Testing.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\CarRentalSystem.Testing.GeneratedMSBuildEditorConfig.editorconfig
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\CarRentalSystem.Testing.AssemblyInfoInputs.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\CarRentalSystem.Testing.AssemblyInfo.cs
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\CarRentalSystem.Testing.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\bin\Debug\net8.0\CarRentalSystem.Testing.deps.json
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\bin\Debug\net8.0\CarRentalSystem.Testing.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\bin\Debug\net8.0\CarRentalSystem.Testing.pdb
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\CarRentalSystem.Testing.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\refint\CarRentalSystem.Testing.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\CarRentalSystem.Testing.pdb
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Testing\obj\Debug\net8.0\ref\CarRentalSystem.Testing.dll

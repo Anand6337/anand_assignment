@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using CarRentalSystem.Utils;
+using NUnit.Framework;
 
 namespace CarRentalSystem.BusinessLayer.Repository
 {
+    [TestFixture]
     public class LeaseRepository
     {
+        [Test]
         public void CreateLease(int vehicleID, int customerID, DateTime startDate, DateTime endDate, string type)
         {
             SqlConnection connection = null;
@@ -48,6 +51,7 @@ namespace CarRentalSystem.BusinessLayer.Repository
             }
         }
 
+        [Test]
         public List<Lease> ListActiveLeases()
         {
             SqlConnection connection = null;

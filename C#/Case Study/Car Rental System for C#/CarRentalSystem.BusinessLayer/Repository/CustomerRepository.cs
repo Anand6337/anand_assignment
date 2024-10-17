@@ -21,51 +21,50 @@ namespace CarRentalSystem.BusinessLayer.Repository
         // Add a new customer
         public void AddCustomer(Customer customer)
         {
-            SqlConnection connection = null;
             try
             {
                 // Initialize and open the database connection
-                connection = DBConnUtil.GetConnection("CarRentalSystem");
-                connection.Open();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                // Prepare the SQL query
-                string query = "INSERT INTO Customers (FirstName, LastName, Email, PhoneNumber) VALUES (@FirstName, @LastName, @Email, @Phone)";
-                SqlCommand command = new SqlCommand(query, connection);
+                    // Prepare the SQL query
+                    string query = "INSERT INTO Customer (FirstName, LastName, Email, PhoneNumber) " +
+                                   "VALUES (@FirstName, @LastName, @Email, @Phone)";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameters to avoid SQL injection
+                        command.Parameters.AddWithValue("@FirstName", customer.FirstName);
+                        command.Parameters.AddWithValue("@LastName", customer.LastName);
+                        command.Parameters.AddWithValue("@Email", customer.Email);
+                        command.Parameters.AddWithValue("@Phone", customer.PhoneNumber);
 
-                // Add parameters to avoid SQL injection
-                command.Parameters.AddWithValue("@FirstName", customer.FirstName);
-                command.Parameters.AddWithValue("@LastName", customer.LastName);
-                command.Parameters.AddWithValue("@Email", customer.Email);
-                command.Parameters.AddWithValue("@Phone", customer.PhoneNumber);
-
-                // Execute the query
-                command.ExecuteNonQuery();
-                Console.WriteLine("Customer added successfully.");
+                        // Execute the query
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Customer added successfully.");
+                    }
+                } // Connection is closed automatically here
+            }
+            catch (SqlException ex)
+            {
+                // Handle SQL-specific exceptions
+                Console.WriteLine("SQL Error: " + ex.Message);
             }
             catch (Exception ex)
             {
-                // Handle exceptions
+                // Handle general exceptions
                 Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-                // Ensure the connection is closed properly
-                if (connection != null && connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                    Console.WriteLine("Database connection closed.");
-                }
             }
         }
 
 
 
         // Update existing customer information
-        public void UpdateCustomer(Customer customer)
+        public bool UpdateCustomer(Customer customer)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Customers SET firstName = @firstName, lastName = @lastName, email = @email, phoneNumber = @phoneNumber WHERE customerID = @customerID";
+                string query = "UPDATE Customer SET firstName = @firstName, lastName = @lastName, email = @email, phoneNumber = @phoneNumber WHERE customerID = @customerID";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Parameters.AddWithValue("@customerID", customer.CustomerID);
@@ -75,8 +74,18 @@ namespace CarRentalSystem.BusinessLayer.Repository
                 command.Parameters.AddWithValue("@phoneNumber", customer.PhoneNumber);
 
                 connection.Open();
-                command.ExecuteNonQuery();
+                int rowsaffected = command.ExecuteNonQuery();
                 connection.Close();
+
+                // Check if any rows were updated
+                if (rowsaffected > 0)
+                {
+                    return true;  // Update successful
+                }
+                else
+                {
+                    return false; // No rows updated (wrong ID)
+                }
             }
         }
 

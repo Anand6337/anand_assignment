@@ -40,6 +40,9 @@
     <Reference Include="CarRentalSystem.Util">
       <HintPath>..\CarRentalSystem.Util\bin\Debug\CarRentalSystem.Util.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -58,12 +61,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CarRepository.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
-    <Compile Include="Repository\ICarLeaseRepositoryImpl.cs" />
+    <Compile Include="Services\ICarLeaseRepositoryImpl.cs" />
     <Compile Include="Repository\LeaseRepository.cs" />
     <Compile Include="Services\ICarLeaseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

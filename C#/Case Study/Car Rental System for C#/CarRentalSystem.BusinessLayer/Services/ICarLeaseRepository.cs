@@ -29,8 +29,6 @@ namespace CarRentalSystem.BusinessLayer
 
         // Payment Handling
         void RecordPayment(int lease, decimal amount);
-        List<Payment> GetPaymentHistoryByCustomer(int customerID);
-        decimal CalculateTotalRevenue();
         Lease GetLeaseById(int leaseId);
         //void ReturnCar(int leaseID);
     }

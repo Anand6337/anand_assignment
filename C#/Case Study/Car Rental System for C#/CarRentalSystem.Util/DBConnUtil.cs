@@ -11,7 +11,7 @@ namespace CarRentalSystem.Utils
             // Read connection string from a configuration file
             string connectionString = ConfigurationManager.ConnectionStrings["CarRentalSystem"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
+            //connection.Open();
             return connection;
         }
     }

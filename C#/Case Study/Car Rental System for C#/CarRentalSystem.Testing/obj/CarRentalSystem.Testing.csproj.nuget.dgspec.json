@@ -1,0 +1,169 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Testing\\CarRentalSystem.Testing.csproj": {}
+  },
+  "projects": {
+    "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.BusinessLayer\\CarRentalSystem.BusinessLayer.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.BusinessLayer\\CarRentalSystem.BusinessLayer.csproj",
+        "projectName": "CarRentalSystem.BusinessLayer",
+        "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.BusinessLayer\\CarRentalSystem.BusinessLayer.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Entity\\CarRentalSystem.Entity.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Entity\\CarRentalSystem.Entity.csproj",
+        "projectName": "CarRentalSystem.Entity",
+        "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Entity\\CarRentalSystem.Entity.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Exception\\CarRentalSystem.Exceptions.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Exception\\CarRentalSystem.Exceptions.csproj",
+        "projectName": "CarRentalSystem.Exceptions",
+        "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Exception\\CarRentalSystem.Exceptions.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Testing\\CarRentalSystem.Testing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Testing\\CarRentalSystem.Testing.csproj",
+        "projectName": "CarRentalSystem.Testing",
+        "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Testing\\CarRentalSystem.Testing.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Testing\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.BusinessLayer\\CarRentalSystem.BusinessLayer.csproj": {
+                "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.BusinessLayer\\CarRentalSystem.BusinessLayer.csproj"
+              },
+              "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Entity\\CarRentalSystem.Entity.csproj": {
+                "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Entity\\CarRentalSystem.Entity.csproj"
+              },
+              "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Exception\\CarRentalSystem.Exceptions.csproj": {
+                "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Exception\\CarRentalSystem.Exceptions.csproj"
+              },
+              "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.UI\\CarRentalSystem.UI.csproj": {
+                "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.UI\\CarRentalSystem.UI.csproj"
+              },
+              "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Util\\CarRentalSystem.Util.csproj": {
+                "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Util\\CarRentalSystem.Util.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.UI\\CarRentalSystem.UI.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.UI\\CarRentalSystem.UI.csproj",
+        "projectName": "CarRentalSystem.UI",
+        "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.UI\\CarRentalSystem.UI.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Util\\CarRentalSystem.Util.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Util\\CarRentalSystem.Util.csproj",
+        "projectName": "CarRentalSystem.Util",
+        "projectPath": "D:\\Microsoft Visual Studio\\Car Rental System Project\\CarRentalSystem.Util\\CarRentalSystem.Util.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}

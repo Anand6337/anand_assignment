@@ -5,3 +5,10 @@ D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRenta
 D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Util\obj\Debug\CarRentalSystem.Util.csproj.CoreCompileInputs.cache
 D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Util\obj\Debug\CarRentalSystem.Util.dll
 D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystemApp\CarRentalSystem.Util\obj\Debug\CarRentalSystem.Util.pdb
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Util\bin\Debug\CarRentalSystem.Util.dll.config
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Util\bin\Debug\CarRentalSystem.Util.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Util\bin\Debug\CarRentalSystem.Util.pdb
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Util\obj\Debug\CarRentalSystem.Util.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Util\obj\Debug\CarRentalSystem.Util.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Util\obj\Debug\CarRentalSystem.Util.dll
+D:\Microsoft Visual Studio\Car Rental System Project\CarRentalSystem.Util\obj\Debug\CarRentalSystem.Util.pdb

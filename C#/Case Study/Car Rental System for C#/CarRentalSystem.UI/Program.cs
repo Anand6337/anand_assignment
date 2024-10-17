@@ -15,7 +15,9 @@ namespace CarRentalSystem
         {
             // Initialize repository and database connection
             ICarLeaseRepository carLeaseRepo = new ICarLeaseRepositoryImpl();
-            CustomerRepository customerRepo = new CustomerRepository(); // New customer repository
+            CustomerRepository customerRepo = new CustomerRepository();
+            CarRepository carRepo = new CarRepository();
+            // New customer repository
             SqlConnection connection = null;
 
             try
@@ -55,7 +57,7 @@ namespace CarRentalSystem
                             ListAllCustomers(customerRepo);
                             break;
                         case "4":
-                            AddNewVehicle(carLeaseRepo);
+                            AddNewVehicle(carRepo);
                             break;
                         case "5":
                             CreateNewLease(carLeaseRepo);
@@ -64,7 +66,7 @@ namespace CarRentalSystem
                             ReturnCar(carLeaseRepo);
                             break;
                         case "7":
-                            ListAvailableCars(carLeaseRepo);
+                            ListAvailableCars(carRepo);
                             break;
                         case "8":
                             ShowActiveLeases(carLeaseRepo); // Renamed method
@@ -117,7 +119,6 @@ namespace CarRentalSystem
                 Customer newCustomer = new Customer(firstName, lastName, email, phone);
                 customerRepo.AddCustomer(newCustomer);
 
-                Console.WriteLine("Customer added successfully.");
             }
             catch (Exception ex)
             {
@@ -154,9 +155,16 @@ namespace CarRentalSystem
                     PhoneNumber = phone
                 };
 
-                customerRepo.UpdateCustomer(updatedCustomer);
 
-                Console.WriteLine("Customer updated successfully.");
+                if (customerRepo.UpdateCustomer(updatedCustomer))
+                {
+                    Console.WriteLine("Customer updated successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Customer ID not found. Update failed.");
+                }
+
             }
             catch (Exception ex)
             {
@@ -183,38 +191,50 @@ namespace CarRentalSystem
         }
 
         // Method to add a new car
-        static void AddNewVehicle(ICarLeaseRepository carLeaseRepo)
+        static void AddNewVehicle(CarRepository carRepo)
         {
-            Console.WriteLine("Enter Vehicle Make: ");
-            string make = Console.ReadLine();
+            try
+            {
+                Console.WriteLine("Enter Vehicle Make: ");
+                string make = Console.ReadLine();
 
-            Console.WriteLine("Enter Vehicle Model: ");
-            string model = Console.ReadLine();
+                Console.WriteLine("Enter Vehicle Model: ");
+                string model = Console.ReadLine();
 
-            Console.WriteLine("Enter Vehicle Year: ");
-            int year = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Vehicle Year: ");
+                int year = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter Vehicle Daily Rate: ");
-            double dailyRate = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter Vehicle Daily Rate: ");
+                decimal dailyRate = Convert.ToDecimal(Console.ReadLine());  
 
-            Console.WriteLine("Enter Passenger Capacity: ");
-            int passengerCapacity = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Passenger Capacity: ");
+                int passengerCapacity = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter Engine Capacity: ");
-            double engineCapacity = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter Engine Capacity: ");
+                int engineCapacity = Convert.ToInt32(Console.ReadLine());
 
-            Car newVehicle = new Car(make, model, year, dailyRate, "available", passengerCapacity, engineCapacity);
-            carLeaseRepo.AddCar(newVehicle);
+                string status = "Available";
+
+                Car newVehicle = new Car(make, model, year, dailyRate, status, passengerCapacity, engineCapacity);
+                carRepo.AddCar(newVehicle);
+
+                Console.WriteLine("Vehicle added successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
 
+
         // List available cars
-        static void ListAvailableCars(ICarLeaseRepository carLeaseRepo)
+        static void ListAvailableCars(CarRepository carRepo)
         {
-            List<Car> availableCars = carLeaseRepo.ListAvailableCars();
+            List<Car> availableCars = carRepo.ListAvailableCars();
             Console.WriteLine("\n--- Available Cars ---");
             foreach (Car car in availableCars)
             {
-                Console.WriteLine($"ID: {car.CarID}, Make: {car.Make}, Model: {car.Model}, Year: {car.Year}, Daily Rate: {car.DailyRate}");
+                Console.WriteLine($"ID: {car.VehicleID}, Make: {car.Make}, Model: {car.Model}, Year: {car.Year}, Daily Rate: {car.DailyRate}");
             }
         }
 
